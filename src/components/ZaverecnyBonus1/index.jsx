@@ -6,9 +6,17 @@ Zadání: Předstírejme, že na stránce je složitý formulář, do kterého u
 */
 
 export const ZaverecnyBonus1 = () => {
+  const confirmLeave = (event) => {
+    const confirmation = confirm('Opravdu chcete odejit?');
+    confirmation ? '' : event.preventDefault();
+  };
+
   return (
     <>
-      Odkaz: <a href="https://www.czechitas.cz/">www.czechitas.cz</a>
+      Odkaz:{' '}
+      <a onClick={confirmLeave} href="https://www.czechitas.cz/">
+        www.czechitas.cz
+      </a>
       <hr />
       Formulář:
       <form>

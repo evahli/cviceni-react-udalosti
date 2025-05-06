@@ -9,10 +9,12 @@ Zadání: Doplňte komponentu tak, aby každé tlačítko po kliknutí vypsalo, 
 */
 
 export const Uloha3 = () => {
+  const handleClick = (event) => {console.log(event.target.textContent)}
+
   return (
     <>
       Které roční období je ve střední Evropě nejteplejší?
-      <ol>
+      <ol onClick={handleClick}>
         <li>
           <button>
             <img src={kvetinaUrl} width={16} height={16} alt="květina" />
